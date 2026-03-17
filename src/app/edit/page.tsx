@@ -3,6 +3,8 @@ import { deleteTransaction } from "../actions";
 import { Trash2, Plus, Pencil } from "lucide-react"; 
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function EditPage() {
   // ดึงข้อมูลทั้งหมดมาแสดง (ใช้ findMany)
   const transactions = await prisma.transaction.findMany({
